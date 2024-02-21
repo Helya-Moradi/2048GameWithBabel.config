@@ -1,0 +1,43 @@
+body
+  margin: 0
+  background-color: #ece6dc
+  font-family: 'Poppins', sans-serif
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+
+.board
+  width: 70vh
+  height: 70vh
+  background-color: #bbada0
+  border-radius: 8px
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr
+
+  .slots
+    grid-area: 1/1
+    display: grid
+    grid-template-rows: repeat(4,1fr)
+    grid-template-columns: repeat(4,1fr)
+    gap: 15px
+    padding: 15px
+
+    .slot
+      background-color: #eee4da59
+      border-radius: 6px
+
+  .tiles
+    grid-area: 1/1
+    position: relative
+
+    .tile
+      position: absolute
+      display: grid
+      place-items: center
+      border-radius: 6px
+      background-color: #eee4da
+      color: #776e65
+      font-size: 3rem
+      font-weight: 600
